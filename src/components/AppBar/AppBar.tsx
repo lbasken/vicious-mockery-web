@@ -5,7 +5,6 @@ export default function AppBar() {
         <section className="flex flex-row-reverse">
             <div className="pr-28"><Link to="/api">API Docs</Link></div>
             <div className="pr-8"><Link to="/about">About</Link></div>
-            <div className="pr-96">Vicious Mockery Insult API</div>
         </section>
     </div>
 

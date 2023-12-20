@@ -1,3 +1,9 @@
+import MockGenerator from "../../components/MockGenerator/MockGenerator.tsx";
+
 export default function HomePage() {
-    return <div>Home Page</div>
+    return <div>
+        <div>Vicious Mockery Random Insult Generator</div>
+        <MockGenerator />
+    </div>
+
 }
