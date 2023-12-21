@@ -13,11 +13,11 @@ export default function MockGenerator() {
     }, []);
 
     function getMock() {
-        const mock = mocks[Math.floor(Math.random() * mocks.length)];
-        console.log(mock);
+        const mock: any = mocks[Math.floor(Math.random() * mocks.length)];
+        return mock?.mock;
     }
 
     return <div>
-        <button onClick={getMock}>Cast Vicious Mockery</button>
+        {getMock()}
     </div>
 }
