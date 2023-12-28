@@ -1,21 +1,37 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export default function HomePage(): any {
 
-    const [mocks, setMocks] = useState([]);
+    const [mocks, setMocks] = useState<any>([]);
+    const [clicked, setClicked] = useState<boolean>(false);
 
-    function getMock(): any {
+    useEffect(() => {
         fetch("https://api-rkstgpevmq-uc.a.run.app/mock")
             .then(response => response.json())
             .then(items => {
                 console.log("items:", items);
                 setMocks(items);
             });
+    }, []);
+
+    function getMock(): any {
+        const randomMock: any = mocks[Math.floor(Math.random() * mocks.length)];
+        console.log("random mock:", randomMock);
+        return randomMock?.mock;
     }
 
-    return <div>
-        <div>
-            <button onClick={getMock}>Test</button>
+    function onClick(): any {
+        setClicked(true);
+    }
+
+    if(clicked) {
+        return <div>
+            {getMock()}
+            <div><button onClick={getMock}>Another!</button></div>
         </div>
-    </div>
+    } else {
+        return <div>
+            <button onClick={onClick}>Click Me!</button>
+        </div>
+    }
 }
