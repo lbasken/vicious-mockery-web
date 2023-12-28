@@ -4,7 +4,7 @@ import AboutPage from "./pages/AboutPage/AboutPage.tsx";
 import DocPage from "./pages/DocPage/DocPage.tsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-function App() {
+function App(): any {
 
   return <BrowserRouter>
     <AppBar/>

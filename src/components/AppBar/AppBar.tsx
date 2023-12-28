@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-export default function AppBar() {
+export default function AppBar(): any {
     return <div className="bg-purple-900 h-10 pt-1.5">
         <section className="flex flex-row-reverse">
             <div className="pr-28 text-white"><Link to="/api">API Docs</Link></div>

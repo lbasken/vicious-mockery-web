@@ -1,17 +1,21 @@
-import MockGenerator from "../../components/MockGenerator/MockGenerator.tsx";
 import {useState} from "react";
 
-export default function HomePage() {
-    const [version, setVersion] = useState(0);
+export default function HomePage(): any {
 
-    function handleReset() {
-        setVersion(version + 1);
+    const [mocks, setMocks] = useState([]);
+
+    function getMock(): any {
+        fetch("https://api-rkstgpevmq-uc.a.run.app/mock")
+            .then(response => response.json())
+            .then(items => {
+                console.log("items:", items);
+                setMocks(items);
+            });
     }
 
-    return (
-        <>
-            <button onClick={handleReset}>Reset</button>
-            <MockGenerator key={version} />
-        </>
-    );
+    return <div>
+        <div>
+            <button onClick={getMock}>Test</button>
+        </div>
+    </div>
 }
