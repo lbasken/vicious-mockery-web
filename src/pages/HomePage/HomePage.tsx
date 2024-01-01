@@ -34,8 +34,8 @@ export default function HomePage(): any {
 
     return <div>
         <div>
-            <button onClick={onClick}>Mock me!</button>
-            <div>{mock}</div>
+            <button className="bg-gray-950 rounded-md text-white" onClick={onClick}>Mock me!</button>
+            <div className="bg-gray-950 rounded-md w-64 text-center text-white">{mock}</div>
         </div>
     </div>
 }
