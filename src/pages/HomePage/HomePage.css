@@ -1,0 +1,7 @@
+body {
+    background-color: black;
+    background-image: url("https://webdev-images.s3.amazonaws.com/vicious-mockery/tavern_backdrop.png");
+    background-size: 1600px 2000px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
