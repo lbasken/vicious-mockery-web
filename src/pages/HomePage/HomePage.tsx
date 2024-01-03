@@ -7,7 +7,7 @@ export default function HomePage(): any {
     const [mock, setMock] = useState<string>();
 
     useEffect(() => {
-        fetch("https://api-rkstgpevmq-uc.a.run.app/mock")
+        fetch("https://api-rkstgpevmq-uc.a.run.app/mocks")
             .then(response => response.json())
             .then(items => {
                 // console.log("items:", items);

@@ -11,7 +11,7 @@ function App(): any {
     <Routes>
       <Route path="/" element={<HomePage />}/>
       <Route path="/about" element={<AboutPage />}/>
-      <Route path="/api" element={<DocPage />}/>
+      <Route path="/documentation" element={<DocPage />}/>
     </Routes>
   </BrowserRouter>
 }
