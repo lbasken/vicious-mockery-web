@@ -29,10 +29,12 @@ export default function HomePage(): any {
         getMock();
     }
 
-    return <div className="absolute">
-        <div>
-            <button className="bg-gray-700 rounded-md text-white" onClick={onClick}>Cast Vicious Mockery</button>
-            <div className="bg-gray-700 rounded-md w-64 text-center text-white">{mock}</div>
+    return <div className="absolute mock-generation">
+        <div className="mock-button">
+            <button className="bg-gray-700 rounded-sm text-white" onClick={onClick}>Cast Vicious Mockery</button>
+        </div>
+        <div className="pt-10">
+            <div className="bg-gray-700 rounded-sm w-64 text-center text-white">{mock}</div>
         </div>
     </div>
 }

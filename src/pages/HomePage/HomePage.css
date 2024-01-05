@@ -4,4 +4,14 @@ body {
     background-size: 1600px 2000px;
     background-repeat: no-repeat;
     background-position: center center;
+
+}
+
+.mock-generation {
+    padding-left: 40%;
+
+    .mock-button {
+    padding-left: 19%;
+        padding-top: 5%;
+}
 }
